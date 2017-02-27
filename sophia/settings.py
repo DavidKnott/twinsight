@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
     'sophia',
+    'comments',
+    'rest_framework'
 ]
+
+REST_FRAMEWORK = {}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

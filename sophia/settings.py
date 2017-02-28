@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'sophia',
     'comments',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework_swagger',
 ]
 
 REST_FRAMEWORK = {}

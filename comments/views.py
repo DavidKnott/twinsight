@@ -1,5 +1,7 @@
-from django.contrib.auth.models import Comment
+from comments.models import Comment
 from rest_framework import viewsets
-from qu
+from comments.serializers import CommentSerializer
 
-# Create your views here.
+class CommentViewSet(viewsets.ModelViewSet):
+  queryset          = Comment.objects.all().order_by('created_date')
+  serializer_class  = CommentSerializer

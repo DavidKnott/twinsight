@@ -26,6 +26,7 @@ class CommentForm extends React.Component {
       .then((json) => {
         // add in a comment thank you
         this.props.onSubmit();
+        this.setState({ value: ""});
     });
   }
 

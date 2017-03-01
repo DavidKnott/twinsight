@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'comments',
     'rest_framework',
     'rest_framework_swagger',
+    'tweepy',
+    'carmen',
+    'twarc',
+    'textblob'
 ]
 
 REST_FRAMEWORK = {}

@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import './App.css';
 import ListComments from '../../components/listcomments';
 import Navbar from '../../components/navbar';
-import CommentForm from '../../components/commentform';
 import Map from '../../components/map';
 import { Router } from 'react-router'
 
@@ -31,7 +30,6 @@ class App extends Component {
         <div style={{ height: '100%' }}>
           {this.content}
         </div>
-        <CommentForm />
         <ListComments />
       </div>
     );

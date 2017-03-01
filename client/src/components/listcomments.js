@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentForm from './commentform';
 
 class ListComments extends React.Component {
   constructor(props) {
@@ -8,6 +9,10 @@ class ListComments extends React.Component {
   }
 
   componentDidMount() {
+    this.CommentList();
+  }
+
+  onSubmit() {
     this.CommentList();
   }
 
@@ -21,13 +26,16 @@ class ListComments extends React.Component {
 
   render() {
     const comments = this.state.comments.map((comment) => {
-      return <div>
-        <p>{comment.content}</p>
-        <h3>Created at {comment.created_date}, by {comment.author}</h3>
-      </div>
+      return(
+        <div>
+          <p>{comment.content}</p>
+          <h3>Created at {comment.created_date}, by {comment.author}</h3>
+        </div>
+      );
     });
 
     return <div id="layout-content" className="layout-content-wrapper">
+      <CommentForm onSubmit={() => this.CommentList()} />
       <div className="panel-list">{ comments }</div>
     </div>
 

@@ -1,46 +1,47 @@
-      {
-        "type": "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -77.034084142948,
-                38.909671288923
-              ]
-            },
-            "properties": {
-              "phoneFormatted": "(202) 234-7336",
-              "phone": "2022347336",
-              "address": "1471 P St NW",
-              "city": "Washington DC",
-              "country": "United States",
-              "crossStreet": "at 15th St NW",
-              "postalCode": "20005",
-              "state": "D.C."
-            }
-          },
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -77.049766,
-                38.900772
-              ]
-            },
-            "properties": {
-              "phoneFormatted": "(202) 507-8357",
-              "phone": "2025078357",
-              "address": "2221 I St NW",
-              "city": "Washington DC",
-              "country": "United States",
-              "crossStreet": "at 22nd St NW",
-              "postalCode": "20037",
-              "state": "D.C."
-            }
-          }
-        ]
-      }
+      // {
+      //   "type": "FeatureCollection",
+      //   "features": [
+      //     {
+      //       "type": "Feature",
+      //       "geometry": {
+      //         "type": "Point",
+      //         "coordinates": [
+      //           -77.034084142948,
+      //           38.909671288923
+      //         ]
+      //       },
+      //       "properties": {
+      //         "phoneFormatted": "(202) 234-7336",
+      //         "phone": "2022347336",
+      //         "address": "1471 P St NW",
+      //         "city": "Washington DC",
+      //         "country": "United States",
+      //         "crossStreet": "at 15th St NW",
+      //         "postalCode": "20005",
+      //         "state": "D.C."
+      //       }
+      //     },
+      //     {
+      //       "type": "Feature",
+      //       "geometry": {
+      //         "type": "Point",
+      //         "coordinates": [
+      //           -77.049766,
+      //           38.900772
+      //         ]
+      //       },
+      //       "properties": {
+      //         "phoneFormatted": "(202) 507-8357",
+      //         "phone": "2025078357",
+      //         "address": "2221 I St NW",
+      //         "city": "Washington DC",
+      //         "country": "United States",
+      //         "crossStreet": "at 22nd St NW",
+      //         "postalCode": "20037",
+      //         "state": "D.C."
+      //       }
+      //     }
+      //   ]
+      // }
 
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [-96.795404, 32.778155]}, "type": "Feature", "properties": {"name": "Dominic A C", "url": "http://twitter.com/Ac4Dominic/status/836735316228714498", "text": "RT @maribelhastings: Los hijos de Guadalupe Garc\\u00eda y otras \'v\\u00edctimas de Trump\' que le esperan en el Congreso https://t.co/k0InXya5Cc via @U\\u2026", "created_at": "2017-03-01T00:30:19+00:00Z", "profile_image_url": "http://pbs.twimg.com/profile_images/820472670567407616/fuZ7r2mS_normal.jpg", "screen_name": "Ac4Dominic"}}, {"geometry": {"type": "Point", "coordinates": [-89.847221, 44.78636]}, "type": "Feature", "properties": {"name": "MrspMoore", "url": "http://twitter.com/mrsp_moore/status/836735316379697152", "text": "RT @NewsHour: What is @K_JeanPierre looking for from President Trump\'s speech to a #JointSession of Congress tonight? #PBSNews https://t.co\\u2026", "created_at": "2017-03-01T00:30:19+00:00Z", "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_6_normal.png", "screen_name": "mrsp_moore"}}, {"geometry": {"type": "Point", "coordinates": [-88.595834, 37.08571]}, "type": "Feature", "properties": {"name": "Justin Case", "url": "http://twitter.com/jwill27racer/status/836735316765589505", "text": "RT @LouisFarrakhan: Mr. Trump is peeling back the onion of White civility. Every layer that he peels back, he\'s getting down to the raw nat\\u2026", "created_at": "2017-03-01T00:30:19+00:00Z", "profile_image_url": "http://pbs.twimg.com/profile_images/829407666472681475/qL42oUm5_normal.jpg", "screen_name": "jwill27racer"}}, {"geometry": {"type": "Point", "coordinates": [-3.48906, 55.283096]}, "type": "Feature", "properties": {"name": "Chris Mobbs", "url": "http://twitter.com/chrisifg/status/836735316501413888", "text": "Retweeted Ivanka Trump (@IvankaTrump):\\n\\nProud to support the signing of H.R. 321 &amp; 255. #ClosingTheGenderGap in... https://t.co/R9covRVoFB", "created_at": "2017-03-01T00:30:19+00:00Z", "profile_image_url": "http://pbs.twimg.com/profile_images/1250538294/999836_Auto_normal.jpg", "screen_name": "chrisifg"}}, {"geometry": {"type": "Point", "coordinates": [-122.370941, 37.878695]}, "type": "Feature", "properties": {"name": "\\u264b\\u2648\\ufe0f\\u264c\\ufe0fLouise", "url": "http://twitter.com/Louise_mtn_wmn/status/836735316123770880", "text": "YIKES!!! Must read! https://t.co/FLlesD4OGE", "created_at": "2017-03-01T00:30:19+00:00Z", "profile_image_url": "http://pbs.twimg.com/profile_images/378800000708929676/ffed89644163d06680e3bb35c35fc168_normal.jpeg", "screen_name": "Louise_mtn_wmn"}}, {"geometry": {"type": "Point", "coordinates": [-104.946339, 39.543743]}, "type": "Feature", "properties": {"name": "DeplorableBarbara", "url": "http://twitter.com/1carpediem2016/status/836735316404887559", "text": "she should not have been there! https://t.co/44IQhdvu6j", "created_at": "2017-03-01T00:30:19+00:00Z", "profile_image_url": "http://pbs.twimg.com/profile_images/830114417673170944/6HLthjka_normal.jpg", "screen_name": "1carpediem2016"}}]}

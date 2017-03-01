@@ -3,7 +3,8 @@
 {% block main %}
   <div>
     <h1>Welcome to Sophia</h1>
-
-   
+    {% for i in tweets %}
+      <p>{{i.text}} </p>
+    {% endfor %}
   </div>
 {% endblock %}

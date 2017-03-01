@@ -14,6 +14,7 @@ class CommentForm extends React.Component {
   }
   
   handleSubmit(event) {
+    event.preventDefault();
     var data = new FormData();
     data.append( "author", "David" );
     data.append( "content", this.state.value );
@@ -23,9 +24,9 @@ class CommentForm extends React.Component {
       body: data
     }).then(function(response) { return response.json(); })
       .then((json) => {
-        console.log(json);
-      });
-    event.preventDefault();
+        // add in a comment thank you
+        this.props.onSubmit();
+    });
   }
 
   render() {

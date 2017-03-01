@@ -12,9 +12,7 @@ class ListComments extends React.Component {
     this.CommentList();
   }
 
-  onSubmit() {
-    this.CommentList();
-  }
+
 
   CommentList() {
     return fetch("/comments")

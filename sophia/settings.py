@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'tweepy',
     'carmen',
-    'twarc',
     'textblob'
 ]
 

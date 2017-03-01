@@ -1,23 +1,32 @@
 import React from 'react';
+import TweetSearch from './tweet_topic_search';
 import ReactMapboxGl, {  GeoJSONLayer  } from "react-mapbox-gl";
 
 class Map extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {geo_tweets: []};
+    this.state = {geo_tweets: [], topic: "clinton"};
   }
 
   componentDidMount() {
     this.TweetList();
   }
 
+  changeTopic(topic) {
+    this.setState({ geo_tweets: [], topic: topic });
+  }
 
   TweetList() {
-    return fetch("/tweets")
+    var topic_param = "?q=";
+    topic_param += this.state.topic;
+    return fetch("/tweets/" + topic_param)
       .then(function(response) { return response.json(); })
       .then((json) => {
         this.setState({geo_tweets: this.state.geo_tweets.concat(json.geo_tweets)});
+        // if (this.state.geo_tweets.length > 3000) {
+        //   this.setState({geo_tweets: this.state.geo_tweets[100..3000]
+        // }
         setTimeout(this.TweetList(), 60000);
       });
   }
@@ -25,7 +34,9 @@ class Map extends React.Component {
     const data={"type": "FeatureCollection", "features": this.state.geo_tweets};
 
     return (
+    
     <div className="col-md-8 col-md-offset-2">
+      <TweetSearch onSubmit={(topic) => this.changeTopic(topic) }/>
       <ReactMapboxGl
   style={"mapbox://styles/mapbox/dark-v8"}
   zoom="3"

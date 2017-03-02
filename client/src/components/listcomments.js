@@ -22,7 +22,7 @@ class ListComments extends React.Component {
     return fetch("/comments")
       .then(function(response) { return response.json(); })
       .then((json) => {
-        this.setState({comments: json.slice(0,20)});
+        this.setState({comments: json.slice(0,15)});
       });
   }
 
@@ -50,10 +50,10 @@ class ListComments extends React.Component {
         }
       }
       return (
-      <div className="col-md-8 col-md-offset-2">
-        {comment_form(this)}
-        <div className="panel-group">{ comments }</div>
-      </div>
+        <div>
+          {comment_form(this)}
+          <div className="panel-group">{ comments }</div>
+        </div>
     )
   }
 }

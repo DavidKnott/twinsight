@@ -30,8 +30,8 @@ urlpatterns = [
     url('', include('django.contrib.auth.urls', namespace='auth')),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^$', schema_view),
-    url(r'^tweets/', tweet_views.home),
+    url(r'^tweets/', tweet_views.tweets),
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

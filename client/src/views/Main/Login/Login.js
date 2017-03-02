@@ -17,12 +17,12 @@ export class Login extends React.Component {
   render() {
     const { auth } = this.props
     return (
-      <div className={styles.root}>
-        <h2>Login</h2>
-        <ButtonToolbar className={styles.toolbar}>
-          <Button bsStyle="primary" onClick={auth.login.bind(this)}>Login</Button>
-        </ButtonToolbar>
-      <ListComments auth={this.props.auth}/>
+      <div className="col-md-8 col-md-offset-2 {styles.root}">
+        <div className="text-center login-sign">
+          <p className="col-md-8">Login to comment</p>
+            <Button className="btn-primary btn-lg" onClick={auth.login.bind(this)}>Login</Button>
+        </div>
+        <ListComments auth={this.props.auth}/>
       </div>
     )
   }

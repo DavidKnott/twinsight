@@ -31,9 +31,11 @@ export class Home extends React.Component {
   render(){
     const { profile } = this.state
     return (
-      <div className={styles.root}>
-        <p>Welcome {profile.name}!</p>
-        <Button onClick={this.logout.bind(this)}>Logout</Button>
+      <div className="col-md-8 col-md-offset-2 {styles.root}" >
+        <div className="text-center welcome-sign">
+          <p className="col-md-8">Welcome {profile.name}!</p>
+          <Button className="btn-lg" onClick={this.logout.bind(this)}>Logout</Button>
+        </div>
         <ListComments login_status={true} profile_name={profile.name}/>
       </div>
     )

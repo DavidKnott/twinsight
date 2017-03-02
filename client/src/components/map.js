@@ -1,5 +1,6 @@
 import React from 'react';
 import TweetSearch from './tweet_topic_search';
+import twinsight_logo from './images/twinsight_logo.png'
 import ReactMapboxGl, {  GeoJSONLayer  } from "react-mapbox-gl";
 import cookie from 'react-cookie';
 

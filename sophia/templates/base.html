@@ -14,7 +14,7 @@
     {% block nav %}
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
+        <a href="http://localhost:3000/" class="brand-logo">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           {% if user and not user.is_anonymous %}
           <li><a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a></li>

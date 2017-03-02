@@ -1,6 +1,7 @@
-from comments.serializers import CommentSerializer
 from django.http import JsonResponse
+from sophia.secrets import *
 from tweets.utils import *
+from 
 import json
 import tweepy
 import carmen
@@ -8,8 +9,8 @@ import carmen
 def tweets(request):
   topic = request.GET.get("q","trump")
   geo_tweets = []
-  auth = tweepy.OAuthHandler("X3Yvtl1VrPYWMZE6Qtlg0SiUg", "5lXQozuhif3c4ptod8Biecgfl9Yhlw8UNNc8kErt7yXsnNEgYs")
-  auth.set_access_token("811004653215350789-og5cwSTNNhnQblE2EdeigA0aZmlplZc", "tIDGoj2UXgl6QE9D0rQikuHFIfDfrazyuv4B5z06zHx6d")
+  auth = tweepy.OAuthHandler(TWITTER_KEY, TWITTER_SECRET)
+  auth.set_access_token(TWITTER_TOKEN, TWITTER_TOKEN_SECRET)
   api = tweepy.API(auth)
   resolver = carmen.get_resolver()
   resolver.load_locations()

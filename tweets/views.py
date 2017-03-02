@@ -1,7 +1,6 @@
 from django.http import JsonResponse
 from sophia.secrets import *
 from tweets.utils import *
-from 
 import json
 import tweepy
 import carmen

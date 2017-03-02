@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import include, url
 from rest_framework_swagger.views import get_swagger_view
 from django.contrib import admin
-from sophia import views as home_views
 from tweets import views as tweet_views
 from comments import views as comment_views
 from rest_framework import routers

@@ -30,7 +30,6 @@ class App extends Component {
         <div style={{ height: '100%' }}>
           {this.content}
         </div>
-        <ListComments />
       </div>
     );
   }

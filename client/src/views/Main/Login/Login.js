@@ -1,6 +1,7 @@
 import React, { PropTypes as T } from 'react'
 import {ButtonToolbar, Button} from 'react-bootstrap'
 import AuthService from '../../../utils/AuthService'
+import ListComments from '../../../components/listcomments'
 import styles from './styles.module.css'
 
 export class Login extends React.Component {
@@ -21,6 +22,7 @@ export class Login extends React.Component {
         <ButtonToolbar className={styles.toolbar}>
           <Button bsStyle="primary" onClick={auth.login.bind(this)}>Login</Button>
         </ButtonToolbar>
+      <ListComments auth={this.props.auth}/>
       </div>
     )
   }

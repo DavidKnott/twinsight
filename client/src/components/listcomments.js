@@ -1,5 +1,9 @@
 import React from 'react';
 import CommentForm from './commentform';
+import AuthService from '../utils/AuthService'
+import Login from '../views/Main/Login/Login'
+import {Button} from 'react-bootstrap'
+
 
 class ListComments extends React.Component {
   constructor(props) {
@@ -22,6 +26,7 @@ class ListComments extends React.Component {
       });
   }
 
+
   render() {
     const comments = this.state.comments.map((comment) => {
       return(
@@ -31,12 +36,21 @@ class ListComments extends React.Component {
         </div>
       );
     });
-
-    return <div id="layout-content" className="layout-content-wrapper">
-      <CommentForm onSubmit={() => this.CommentList()} />
-      <div className="panel-list">{ comments }</div>
-    </div>
-
+    const comment_form = function(login_status){
+        if (login_status) {
+          return(
+            <div id="layout-content" className="layout-content-wrapper">
+              <CommentForm onSubmit={() => this.CommentList()} />
+            </div>
+          )
+        }
+      }
+      return (
+      <div>
+        {comment_form(this.props.login_status) }
+        <div className="panel-list">{ comments }</div>
+      </div>
+    )
   }
 }
 

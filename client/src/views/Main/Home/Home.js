@@ -2,6 +2,7 @@ import React, { PropTypes as T } from 'react'
 import {Button} from 'react-bootstrap'
 import AuthService from '../../../utils/AuthService'
 import styles from './styles.module.css'
+import ListComments from '../../../components/listcomments'
 
 export class Home extends React.Component {
   static contextTypes = {
@@ -34,6 +35,7 @@ export class Home extends React.Component {
         <h2>Home</h2>
         <p>Welcome {profile.name}!</p>
         <Button onClick={this.logout.bind(this)}>Logout</Button>
+        <ListComments login_status={true}/>
       </div>
     )
   }

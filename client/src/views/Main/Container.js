@@ -17,9 +17,6 @@ export class Container extends React.Component {
 
     return (
       <Jumbotron>
-        <h2 className={styles.mainTitle}>
-          <img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg" />
-        </h2>
         {children}
       </Jumbotron>
     )

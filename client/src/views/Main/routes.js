@@ -10,7 +10,7 @@ const auth = new AuthService('bD1Z5cpTb1g1umwFhSO2bcGUPd6FfzT4', 'twitteranalysi
 // validate authentication for private routes
 const requireAuth = (nextState, replace) => {
   if (!auth.loggedIn()) {
-    replace({ pathname: '/login' })
+    replace({ pathname: '/home' })
   }
 }
 
@@ -18,7 +18,7 @@ export const makeMainRoutes = () => {
   return (
     <Route path="/" component={Container} auth={auth}>
       <IndexRedirect to="/home" />
-      <Route path="home" component={Home} onEnter={requireAuth} />
+      <Route path="home" component={Home} />
       <Route path="login" component={Login} />
     </Route>
   )

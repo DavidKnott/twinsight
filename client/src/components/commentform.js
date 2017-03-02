@@ -1,4 +1,8 @@
 import React from 'react';
+import Login from '../views/Main/Login/Login'
+import {Button} from 'react-bootstrap'
+
+
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -8,6 +12,8 @@ class CommentForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  
 
   handleChange(event) {
     this.setState({value: event.target.value});
@@ -31,15 +37,15 @@ class CommentForm extends React.Component {
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <textarea value={this.state.value} onChange={this.handleChange} placeholder="Comment Here" />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
+      return (
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              <textarea value={this.state.value} onChange={this.handleChange} placeholder="Comment Here" />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+      );
+    }
 }
 
 export default CommentForm;

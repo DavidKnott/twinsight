@@ -1,12 +1,14 @@
 import React from 'react';
 import TweetSearch from './tweet_topic_search';
 import ReactMapboxGl, {  GeoJSONLayer  } from "react-mapbox-gl";
+import cookie from 'react-cookie';
 
 class Map extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {geo_tweets: [], topic: "clinton"};
+    cookie.save('topic', this.state.topic, { path: '/' });
   }
 
   componentDidMount() {
@@ -19,6 +21,7 @@ class Map extends React.Component {
 
   changeTopic(topic) {
     this.setState({topic: topic });
+    cookie.save('topic', topic, { path: '/' });
     this.sleep(2000).then(()=> {
       this.setState({ geo_tweets: [] });
       this.TweetList();
@@ -31,7 +34,7 @@ class Map extends React.Component {
     return fetch("/tweets/" + topic_param)
       .then(function(response) { return response.json(); })
       .then((json) => {
-        this.setState({geo_tweets: this.state.geo_tweets.concat(json.geo_tweets)});
+        this.setState({geo_tweets: (this.state.geo_tweets.concat(json.geo_tweets)).slice(0,3000)});
         this.sleep(3000).then(() => {
           this.TweetList();
           });
@@ -43,7 +46,7 @@ class Map extends React.Component {
     return (
     <div className="col-md-12" >
       <div className="col-md-8 col-md-offset-2">
-        <TweetSearch onSubmit={(topic) => this.changeTopic(topic) } current_topic={this.state.topic} />
+        <TweetSearch onSubmit={(topic) => this.changeTopic(topic) } current_topic={cookie.load('topic')} />
         <ReactMapboxGl
     style={"mapbox://styles/mapbox/dark-v8"}
     zoom="3"

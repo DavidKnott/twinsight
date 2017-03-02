@@ -32,10 +32,9 @@ export class Home extends React.Component {
     const { profile } = this.state
     return (
       <div className={styles.root}>
-        <h2>Home</h2>
         <p>Welcome {profile.name}!</p>
         <Button onClick={this.logout.bind(this)}>Logout</Button>
-        <ListComments login_status={true}/>
+        <ListComments login_status={true} profile_name={profile.name}/>
       </div>
     )
   }

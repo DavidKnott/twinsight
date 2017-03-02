@@ -22,7 +22,7 @@ class ListComments extends React.Component {
     return fetch("/comments")
       .then(function(response) { return response.json(); })
       .then((json) => {
-        this.setState({comments: json});
+        this.setState({comments: json.slice(0,20)});
       });
   }
 
@@ -31,24 +31,28 @@ class ListComments extends React.Component {
     const comments = this.state.comments.map((comment) => {
       return(
         <div>
-          <p>{comment.content}</p>
-          <h3>Created at {comment.created_date}, by {comment.author}</h3>
+          <div className="panel-body">
+            <p>{comment.content}</p>
+          </div>
+          <div className="panel-footer">
+            <h5>Created at {comment.created_date}, &nbsp;&nbsp;&nbsp;&nbsp; by {comment.author}</h5>
+          </div>
         </div>
       );
     });
-    const comment_form = function(login_status){
-        if (login_status) {
+    const comment_form = function(context){
+        if (context.props.login_status) {
           return(
             <div id="layout-content" className="layout-content-wrapper">
-              <CommentForm onSubmit={() => this.CommentList()} />
+              <CommentForm onSubmit={() => context.CommentList()} profile_name={context.props.profile_name} />
             </div>
           )
         }
       }
       return (
-      <div>
-        {comment_form(this.props.login_status) }
-        <div className="panel-list">{ comments }</div>
+      <div className="col-md-8 col-md-offset-2">
+        {comment_form(this)}
+        <div className="panel-group">{ comments }</div>
       </div>
     )
   }
